@@ -14,14 +14,14 @@ import { ScrollView } from 'react-native-virtualized-view'
 
 const jobTypes =["Full-time", "Part-time", "Contractor"]
 
-const Welcome = () => {
+const Welcome = ({searchTerm, setSearchTerm, handleClick}) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState('Full-time')  
   return (
     <View>
       <View style ={styles.container}>
-      <Text style={styles.userName}>hello motherfuckers</Text>
-      <Text style={styles.welcomeMessage}>find your next time wasting shithole</Text>
+      <Text style={styles.userName}>Good morning and if I don't see you good afternoon and good night</Text>
+      <Text style={styles.welcomeMessage}>find your next Job</Text>
       </View>
     
     <View style={styles.searchContainer}>
@@ -29,8 +29,8 @@ const Welcome = () => {
 
       <TextInput
       style = {styles.searchInput}
-      value = ""
-      onChange={() => {}}
+      value = {searchTerm}
+      onChangeText={(text) => setSearchTerm(text)}
       placeholder="What are you searching for?"
       placeholderTextColor={COLORS.gray}
       
@@ -38,7 +38,7 @@ const Welcome = () => {
       />
       
       </View>
-      <TouchableOpacity style= {styles.searchBtn}>
+      <TouchableOpacity style= {styles.searchBtn} onPress = {handleClick}>
         <Image source={icons.search}
         resizeMode='contain'
         style={styles.searchBtnImage}
@@ -78,4 +78,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default Welcome;

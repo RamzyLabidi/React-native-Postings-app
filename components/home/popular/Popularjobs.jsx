@@ -16,9 +16,15 @@ const Popularjobs = () => {
   const {data, isLoading, error} = useFetch(
     'search', {
       query: 'React developer',
-      num_pages: 1
+      num_pages: 1,
     }
-  )
+  );
+  const [selectedJob, setSelectedJob] = useState();
+  // console.log({data, isLoading, error});
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`);
+    setSelectedJob(item.job_id);
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -35,12 +41,12 @@ const Popularjobs = () => {
     ): error ? (
       <Text>Something went wrong</Text>
     ):(
-      <FlatList
-      data={[1, 2, 3, 4, 5]}
-      renderItem ={(item)=> (
+      <FlatList 
+      data={data}
+      renderItem ={({item})=> (
         <PopularJobCard item={item}/>
       )}
-      keyExtractor={item=>item?.job_id}
+      keyExtractor={(item)=>item.job_id}
       contentContainerStyle={{columnGap: SIZES.medium}}
       horizontal
       />
@@ -51,4 +57,4 @@ const Popularjobs = () => {
   )
 }
 
-export default Popularjobs
+export default Popularjobs;

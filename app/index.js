@@ -5,8 +5,10 @@ import {COLORS, icons, images, SIZES} from '../constants'
 import {Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome} from '../components'
 
 
+
 const home = () =>{
-   const router = useRouter();
+   const router = useRouter(); 
+   const[searchTerm, setSearchTerm] = useState("")
 
    
    return (
@@ -32,7 +34,19 @@ const home = () =>{
             }}
             >
             <Welcome
+            searchTerm = {searchTerm}
+            setSearchTerm = {setSearchTerm}
+            handleClick = {() => {
+                if (searchTerm) {
+                    router.push(`/search/${searchTerm}`)
+                }
+
+
+            }
             
+            
+            
+            }
             />
 
             <Popularjobs/>
