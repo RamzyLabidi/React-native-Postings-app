@@ -16,9 +16,6 @@ npx create-expo-app -e with-router ./
 ```sh
 npm start 
 ```
+![Capture d'écran 2023-10-13 142423](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/6274f698-e730-4dcb-aeb6-6dca380a57b7)
 
-![IMG_2124|30%](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/cca3fb20-07d5-43a0-b1b2-25b76074d2fe)
-![IMG_2130|320x271](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/cfbca10f-9067-4404-9a98-30175429c4ca)
-![IMG_2129|320x271](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/91d3c6b1-3109-4ad2-81e2-c247ce910b70)
-![IMG_2128|320x271](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/06397873-8a4b-4ca0-923f-370a475d5cc6)
-![IMG_2126|320x271](https://github.com/RamzyLabidi/React-native-Postings-app/assets/63471830/ec371490-c505-41e7-817e-5e5df709a9bc)
+
