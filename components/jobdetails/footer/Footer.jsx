@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
 
 import styles from './footer.style'
 import {icons} from '../../../constants'
-const Footer = () => {
+const Footer = ({ url }) => {
   return (
     <View style = {styles.container}>
       <TouchableOpacity style = {styles.likeBtn}>
@@ -26,4 +26,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
