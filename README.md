@@ -5,7 +5,7 @@ Use [`expo-router`](https://expo.github.io/router) to build native navigation us
 ## 🚀 How to use
 
 ```sh
-npx create-expo-app -e with-router
+npx create-expo-app -e with-router ./
 ```
 
 ## 📝 Notes
@@ -13,4 +13,3 @@ npx create-expo-app -e with-router
 - [Expo Router: Docs](https://expo.github.io/router)
 - [Expo Router: Repo](https://github.com/expo/router)
 # React-native-Postings-app
-# stamps_fe
